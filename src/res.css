@@ -1,0 +1,359 @@
+/* _________basic update____________ */
+
+body{
+    font-family: "open sans", sans-serif;
+    /* color: white; */
+}
+a{
+    color: #149ddd ;
+    text-decoration: none;
+}
+a:hover{
+    color: #37b3ed;
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+/* ____________header part______________ */
+#header{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    background-color:black;
+    transition: all ease-in-out 0.5s;
+    padding:0 20px;
+    overflow-y: auto;
+    z-index: 9997;
+    
+}
+#header .profile img{
+    margin: 15px auto;
+    display: block;
+    width:120px;
+    border:8px solid grey;
+   
+}
+#header .profile h4{
+    
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+#header .profile a,
+#header .profile a:hover{
+    color:#fff;
+    text-decoration:none;
+}
+#header .profile .social-media a{
+    font-size: 18px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+
+}
+
+#header .profile .social-media a:hover {
+        background-color: #149ddd;
+        color: #fff;
+        text-decoration: none;
+
+}
+#main{
+    margin-left: 300px;
+}
+.container,
+.container-fluid{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media (max-width:1199px) {
+    #header{
+        left: -300px;
+    }
+    #main{
+        margin-left: 0;
+    }
+    .container,.container-fluid{
+        padding-left: 12px;
+    padding-right: 12px;
+    }
+}
+/*_____________________ Navigation menu___________*/
+
+#navbar{
+    padding: 30px 0 0 0;
+
+}
+#navbar *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#navbar > ul>li{
+    position: relative;
+    white-space: nowrap;
+}
+#navbar a,
+#navbar a:focus{
+    display: flex;
+    align-items: center;
+    color: #a8a9b4;
+    padding: 8px 15px;
+    margin-bottom: 2px;
+    transition: 0.3s;
+    font-size: 18px;
+}
+#navbar a i,
+#navbar a:focus i{
+    font-size: 24px;
+    padding-right: 8px;
+    color:#6f7180
+}
+#navbar a:hover,
+#navbar .active,
+#navbar .active:focus,
+#navbar li:hover>a{
+    text-decoration: none;
+    color:#fff
+}
+#navbar a:hover i,
+#navbar .active i,
+#navbar .active:focus i,
+#navbar li:hover>a i{
+    color :#0c8ac0;
+}
+/* ________Bar button_________*/
+
+.check{
+    display:none;
+}
+.check:checked ~ #header{
+    left:0;
+}
+.barbutton{
+    position: fixed;
+    top:20px;
+    right:20px;
+    font-size: 36px;
+    background-color: #149ddd;
+    border: none;
+    text-align: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 4;
+    transition: all 0.3s;
+}
+.barbutton:active{
+    overflow: hidden;
+}
+.barbutton:active #header{
+    left:0;
+}
+
+
+/* ___________hero part____________ */
+#hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url('./Images/bg.jpg') ;
+    background-size: cover;
+    background-position: right;
+    /* color: white; */
+    /* font-weight: 800; */
+    color: white;
+}
+#hero:before {
+    content:"";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+   
+    background-color: rgba(5, 13, 24, 0.3);
+    z-index:1;
+}
+#hero .hero-container{
+    position: relative;
+    left: 26%;
+    top: 10%;
+    z-index: 2;
+    min-width: 300px;
+   
+}
+#hero h1{
+    margin: 0 0 10px 0;
+    font-size: 50px;
+    
+    line-height: 56px;
+}
+#hero p{
+    margin-bottom: 50px;;
+    font-size: 26px;
+    font-family: 'Poppins',sans-serif;
+}
+
+@media (min-width:1024){
+    #hero{
+        background-attachment: fixed;
+    }
+
+}
+@media (max-width:768){
+    #hero h1{
+        font-size: 20px;
+        line-height: 36px;
+       margin-right: 10px;
+
+    }
+    #hero p{
+        font-size: 18px;
+        line-height: 24px;
+
+    }
+}
+/*_______general section design__________*/
+
+ section{
+    padding: 60px 0;
+    overflow: hidden;
+}
+.section-bg{
+    background: #f5f8fd;
+}
+.section-title{
+    padding-bottom: 30px;
+} 
+.section-title h3{
+    color: #173b6c;
+    font-size: 32px;
+    font-weight: bold;
+    border-left: 5px solid #173b6c;
+    padding-left: 7px;
+    position: relative;
+}
+.section-title p{
+    margin-bottom: 0;
+    word-spacing: 1.5px;
+    line-height: 34px;
+    text-indent: 50px;
+}
+
+/*_______about section__________*/
+
+.about .content h3{
+    color: #173b6c;
+    font-size: 32px;
+    font-weight: bold;    
+}
+.about .content ul{
+        list-style: none;
+        padding: 0;
+}
+.about .content ul li{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.about .content ul strong{
+    margin-right: 10px;
+}
+
+.about .content ul i{
+        font-size: 16px;
+        margin-right: 10px;
+        color: #173b6c;
+        transition: 0.3s;
+}
+.about .content  p{
+    line-height: 34px;
+    text-indent: 45px;
+}
+/* ___________education details___________ */
+.box{
+    background: rgba(100, 100, 100, 0.055);
+    box-shadow: 5px 5px   #2124314f;
+}
+.bbox{
+    box-shadow: 5px 5px 5px 5px  #2124314f;
+    background: rgba(100, 100, 100, 0.020);
+}
+.btn-group .btn{
+    background-color: #2124319d;
+    box-shadow: 2px 2px 2px 2px rgb(4, 4, 12);
+    
+}
+
+.container .edu-details .college img{
+    float: left;
+    margin-right: 8px;
+}
+.container .edu-details .college h5 {
+    font-style: italic;   
+    font-weight: 400;
+    margin-top: 10px;         
+    line-height:30px;
+}
+.container .edu-details .college span{
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 70px;
+    color: #173b6c;
+}
+.container .edu-details .polytechnic img{
+    float: left;
+    margin: 8px;
+}
+.container .edu-details .polytechnic h5 {
+    font-style: italic;   
+    font-weight: 400;
+    margin-top: 10px;         
+    line-height:30px;
+}
+.container .edu-details .polytechnic span{
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 70px;
+    color: #173b6c;
+}
+
+/* ______________work experience_______________- */
+
+.container .work-experience h5{
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 10px;         
+    line-height:30px;
+}
+.container .work-experience cite{
+    font-size: 19px;
+    font-weight: 600;
+   
+    color: #173b6c;
+}
+.container .work-experience p{
+    text-indent: 50px;
+    line-height: 37px;
+    padding-top: 8px;
+}
+
